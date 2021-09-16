@@ -1,15 +1,17 @@
 # User-specific stuff
 .idea/
+*.iml
 
 # Gradle and Maven with auto-import
- *.iml
- *.ipr
+*.ipr
 
 # File-based project format
 *.iws
 
 out/
 output/
+target/
+assignments/*/target/
 
 *.class
 *.log
