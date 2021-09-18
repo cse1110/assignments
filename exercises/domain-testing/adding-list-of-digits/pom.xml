@@ -34,7 +34,7 @@
             <plugin>
                 <groupId>io.github.cse1110</groupId>
                 <artifactId>andy-maven-plugin</artifactId>
-                <version>[0.1.0,1.0.0)</version>
+                <version>0.1</version>
             </plugin>
         </plugins>
 
