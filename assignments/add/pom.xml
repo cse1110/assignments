@@ -4,51 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>NumberUtils</artifactId>
+    <groupId>io.github.cse1110</groupId>
+    <artifactId>exercise-add</artifactId>
     <version>1.0</version>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
-        <org.assertj.version>3.20.2</org.assertj.version>
-        <org.mockito.version>3.10.0</org.mockito.version>
-        <org.junit.jupiter.version>5.8.0-M1</org.junit.jupiter.version>
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
         <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${org.assertj.version}</version>
-            <scope>test</scope>
+            <groupId>io.github.cse1110</groupId>
+            <artifactId>andy</artifactId>
+            <version>[0.0.1,1.0.0)</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${org.mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${org.junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${org.junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <enableAssertions>true</enableAssertions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
