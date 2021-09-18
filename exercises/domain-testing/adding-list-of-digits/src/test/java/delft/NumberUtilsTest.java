@@ -9,7 +9,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.*;
 
-class NumberUtilsTests {
+class NumberUtilsTest {
 
     // call the method under test: NumberUtils.add(left, right)
 
