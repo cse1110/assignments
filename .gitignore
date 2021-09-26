@@ -11,6 +11,7 @@
 out/
 output/
 target/
+andy/
 assignments/*/target/
 
 *.class
