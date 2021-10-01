@@ -16,7 +16,7 @@ assignments/*/target/
 
 *.class
 *.log
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
