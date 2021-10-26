@@ -23,3 +23,11 @@ You have to ensure you are in the same directory the `pom.xml` file is in. If yo
 
 ### Maven Plugin
 If you have a Maven Plugin integration with your IDE, you would only have to look for the plugins under the category `andy` and run the `andy:run` plugin. This will run Andy in a new window and print the errors, results and grades there.
+
+## Requirements
+
+We use Java 15 for all the exercises and in the grading tool. We can't promise things will work in other versions (you know Java, don't you?)
+
+## License
+
+This repository is licensed under Creative Commons. Some exercises point to websites that inspired us, and those websites have their own licenses.
