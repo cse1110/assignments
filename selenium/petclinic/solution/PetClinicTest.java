@@ -298,7 +298,7 @@ class PetClinicTest {
             List<OwnerInfo> owners = new ArrayList<>();
 
             WebElement table = driver.findElement(By.id("owners"));
-            List<WebElement> rows = table.findElement(By.tagName("tbodsy")).findElements(By.tagName("tr"));
+            List<WebElement> rows = table.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
 
             for (WebElement row : rows) {
                 List<WebElement> columns = row.findElements(By.tagName("td"));
