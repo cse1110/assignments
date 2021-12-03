@@ -1,6 +1,6 @@
-The `indexOf` method (in the Library tab) returns the index of the given value in the array starting at the given index.
+The `search` method (in the Library tab) returns the index of the given value in the array starting at the given index.
 
-Your task is to write property-based tests (usinq JQWik) for this `indexOf` method.
+Your task is to write property-based tests (usinq JQWik) for this `search` method.
 
 Some tips:
 

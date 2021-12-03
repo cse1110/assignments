@@ -12,27 +12,27 @@ import org.junit.jupiter.api.Test;
 class ArrayUtilsTests {
 
 	@Test
-	void indexOfNull() {
-		assertThat(ArrayUtils.indexOf(null, 37, 0)).isEqualTo(-1);
+	void searchForNull() {
+		assertThat(ArrayUtils.search(null, 37, 0)).isEqualTo(-1);
 	}
 
 	@Test
-	void indexOfEmptyList() {
-		assertThat(ArrayUtils.indexOf(new int[0], 37, 0)).isEqualTo(-1);
+	void searchEmptyList() {
+		assertThat(ArrayUtils.search(new int[0], 37, 0)).isEqualTo(-1);
 	}
 
 	@Test
-	void indexOfShouldNotFindValue() {
-		assertThat(ArrayUtils.indexOf(new int[]{1, 2, 3, 4, 5}, 6, 0)).isEqualTo(-1);
+	void searchShouldNotFindValue() {
+		assertThat(ArrayUtils.search(new int[]{1, 2, 3, 4, 5}, 6, 0)).isEqualTo(-1);
 	}
 
 	@Test
 	void negativeIndexSimplyBecomesAZero() {
-		assertThat(ArrayUtils.indexOf(new int[]{1, 2, 3, 4, 5}, 4, -1)).isEqualTo(3);
+		assertThat(ArrayUtils.search(new int[]{1, 2, 3, 4, 5}, 4, -1)).isEqualTo(3);
 	}
 
 	@Property
-	void indexOfShouldFindFirstValue(
+	void searchShouldFindFirstValue(
 			/*
 			 * we generate a list with 20 numbers, ranging from -1000, 1000. Range chosen
 			 * randomly.
@@ -62,7 +62,7 @@ class ArrayUtilsTests {
 		 * to return the index of the last element in the array.
 		 */
 		int expectedIndex = indexToAddElement >= startIndex ? indexToAddElement : array.length - 1;
-		assertThat(ArrayUtils.indexOf(array, value, startIndex)).isEqualTo(expectedIndex);
+		assertThat(ArrayUtils.search(array, value, startIndex)).isEqualTo(expectedIndex);
 	}
 
 	/** Use this method to convert a list of integers to an array */

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.cse1110</groupId>
-    <artifactId>indexOf</artifactId>
+    <artifactId>search</artifactId>
     <version>1.0</version>
 
     <properties>

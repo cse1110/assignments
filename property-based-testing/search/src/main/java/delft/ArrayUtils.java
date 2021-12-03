@@ -34,7 +34,7 @@ class ArrayUtils {
 	 * @return the index of the value within the array, {@link #INDEX_NOT_FOUND}
 	 *         ({@code -1}) if not found or {@code null} array input
 	 */
-	public static int indexOf(final int[] array, final int valueToFind, int startIndex) {
+	public static int search(final int[] array, final int valueToFind, int startIndex) {
 		if (array == null) {
 			return INDEX_NOT_FOUND;
 		}
