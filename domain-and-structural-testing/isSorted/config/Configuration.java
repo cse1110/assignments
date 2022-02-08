@@ -34,13 +34,13 @@ public class Configuration extends RunConfiguration {
         return List.of(
                 MetaTest.insertAt("the array is empty", 19,
                         """
-                        if (array.length == 0) {
+                        if (array != null && array.length == 0) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
                 MetaTest.insertAt("the array has one element", 19,
                         """
-                        if (array.length == 1) {
+                        if (array != null && array.length == 1) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
