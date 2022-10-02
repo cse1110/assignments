@@ -29,7 +29,7 @@ public class Configuration extends RunConfiguration {
 
     @Override
     public int numberOfMutationsToConsider() {
-        return 33;
+        return 32;
     }
 
     @Override
