@@ -1,4 +1,4 @@
-import os, re
+import os, re, sys
 from shutil import copyfile
 
 def get_directories(basedir):
