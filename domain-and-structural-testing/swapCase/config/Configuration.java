@@ -25,56 +25,51 @@ public class Configuration extends RunConfiguration {
     }
 
     @Override
-    public int numberOfMutationsToConsider() {
-        return 10;
-    }
-
-    @Override
     public List<MetaTest> metaTests() {
         return List.of(
-                MetaTest.insertAt("the string is empty", 29,
+                MetaTest.insertAt("the string is empty", 28,
                         """
                          if ("".equals(str)) {
                             throw new RuntimeException("killed the mutant");
                          }
                          """),
-                MetaTest.insertAt("the string is null", 29,
+                MetaTest.insertAt("the string is null", 28,
                         """
                          if (str == null) {
                             throw new RuntimeException("killed the mutant");
                          }
                          """),
-                MetaTest.insertAt("the string is one lowercase letter", 32,
+                MetaTest.insertAt("the string is one lowercase letter", 31,
                         """
                         if (str.matches("[a-z]")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is one uppercase letter", 32,
+                MetaTest.insertAt("the string is one uppercase letter", 31,
                         """
                         if (str.matches("[A-Z]")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is one character whitespace", 32,
+                MetaTest.insertAt("the string is one character whitespace", 31,
                         """
                         if (str.matches(" ")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is multiple lowercase characters", 32,
+                MetaTest.insertAt("the string is multiple lowercase characters", 31,
                         """
                         if (str.matches("[a-z]+")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is multiple uppercase characters", 32,
+                MetaTest.insertAt("the string is multiple uppercase characters", 31,
                         """
                         if (str.matches("[A-Z]+")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string has more than 3 characters", 33,
+                MetaTest.insertAt("the string has more than 3 characters", 32,
                         """
                         if (buffer.length > 3) {
                             throw new RuntimeException("killed the mutant");
@@ -89,47 +84,27 @@ public class Configuration extends RunConfiguration {
                 MetaTest.withStringReplacement("does only work for upper case characters",
                         """
                         else if (Character.isLowerCase(ch)) {
-                            if (whitespace) {
-                                buffer[i] = Character.toTitleCase(ch);
-                                whitespace = false;
-                            } else {
-                                buffer[i] = Character.toUpperCase(ch);
-                            }
-                        } else {
-                            whitespace = Character.isWhitespace(ch);
+                            buffer[i] = Character.toUpperCase(ch);
                         }
                         """,
                         ""),
-                MetaTest.withStringReplacement("does not work for title case characters",
-                        """
-                        if (whitespace) {
-                            buffer[i] = Character.toTitleCase(ch);
-                            whitespace = false;
-                        """,
-                        """
-                        if (whitespace) {
-                            buffer[i] = Character.toLowerCase(ch);
-                            whitespace = false;
-                        """),
                 MetaTest.withStringReplacement("does not work for upper case characters",
                         """
                         if (Character.isUpperCase(ch)) {
                             buffer[i] = Character.toLowerCase(ch);
-                            whitespace = false;
                         """,
                         """
                         if (Character.isUpperCase(ch)) {
                             buffer[i] = Character.toUpperCase(ch);
-                            whitespace = false;
                         """),
                 MetaTest.withStringReplacement("does not work for lower case characters",
                         """
-                        else {
+                        else if (Character.isLowerCase(ch)) {
                             buffer[i] = Character.toUpperCase(ch);
                         }
                         """,
                         """
-                        else {
+                        else if (Character.isLowerCase(ch)) {
                             buffer[i] = Character.toLowerCase(ch);
                         }
                         """)

@@ -6,13 +6,11 @@ class DelftWordUtilities {
         // Override default constructor, to prevent it from getting considered in the coverage report.
     }
 
-	// -----------------------------------------------------------------------
 	/**
 	 * Swaps the case of a String using a word based algorithm.
 	 *
 	 * <ul>
 	 * <li>Upper case character converts to Lower case
-	 * <li>Title case character converts to Lower case
 	 * <li>Lower case character after Whitespace or at start converts to Title case
 	 * <li>Other Lower case character converts to Upper case
 	 * </ul>
@@ -35,20 +33,13 @@ class DelftWordUtilities {
 			final char ch = buffer[i];
 			if (Character.isUpperCase(ch)) {
 				buffer[i] = Character.toLowerCase(ch);
-				whitespace = false;
 			} else if (Character.isLowerCase(ch)) {
-				if (whitespace) {
-					buffer[i] = Character.toTitleCase(ch);
-					whitespace = false;
-				} else {
-					buffer[i] = Character.toUpperCase(ch);
-				}
-			} else {
-				whitespace = Character.isWhitespace(ch);
+				buffer[i] = Character.toUpperCase(ch);
 			}
 		}
 		return new String(buffer);
 	}
+
 
 	/**
 	 * Checks if a CharSequence is empty ("") or null. *
