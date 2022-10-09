@@ -17,12 +17,14 @@ for category_dir in get_directories(os.getcwd()):
         copyfile(f'{assignment_dir}/solution/{testfile}', f'{assignment_dir}/src/test/java/delft/{testfile}')
 
         # Run `andy` on the current assignment.
-        output = os.popen('mvn andy:run').read()
+        output = os.popen('mvn andy:run -Dfull=true').read()
         re_score = re.search('Final grade: [0-9]+', output)
         score = int(re_score.group().split()[2]) if re_score else -1
+        re_andy_version = re.search('Andy v.+', output)
+        andy_version = re_andy_version.group() if re_andy_version else "Unknown Andy version"
 
         # Print the score for the assignment.
-        print(f'{assignment_dir.split("/")[-2]}/{assignment_dir.split("/")[-1]}: {score}/100')
+        print(f'{andy_version} | {assignment_dir.split("/")[-2]}/{assignment_dir.split("/")[-1]}: {score}/100')
 
         # Update the `pipeline_failed` variable.
         if score != 100:
