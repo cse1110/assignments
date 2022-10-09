@@ -31,21 +31,14 @@ public class Configuration extends RunConfiguration {
         return List.of(
                 MetaTest.withStringReplacement("no empty field check",
                         "/BookStore/index.html",
-                        "/metatest-1/index.html"),
+                        "/config/metatest-1/index.html"),
                 MetaTest.withStringReplacement("no duplicate author check",
                         "/BookStore/index.html",
-                        "/metatest-2/index.html"),
+                        "/config/metatest-2/index.html"),
                 MetaTest.withStringReplacement("does not add to database",
                         "/BookStore/index.html",
-                        "/metatest-3/index.html")
+                        "/config/metatest-s3/index.html")
         );
-    }
-
-    @Override
-    public ExternalProcess externalProcess() {
-        return new CommandExternalProcess(
-                "sh ./extract.sh",
-                "done extracting");
     }
 
     @Override
