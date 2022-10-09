@@ -29,24 +29,18 @@ public class Configuration extends RunConfiguration {
     @Override
     public List<MetaTest> metaTests() {
         return List.of(
-                MetaTest.withStringReplacement("Bookname cannot be empty",
+                MetaTest.withStringReplacement("search does not work at all",
                         "/BookStore/index.html",
                         "/config/metatest-1/index.html"),
-                MetaTest.withStringReplacement("Saving without an author",
+                MetaTest.withStringReplacement("search requires full strings",
                         "/BookStore/index.html",
                         "/config/metatest-2/index.html"),
-                MetaTest.withStringReplacement("Duplicate books should not be allowed",
+                MetaTest.withStringReplacement("no result does not give any information",
                         "/BookStore/index.html",
                         "/config/metatest-3/index.html"),
-                MetaTest.withStringReplacement("Book is not actually saved",
+                MetaTest.withStringReplacement("all results are always displayed",
                         "/BookStore/index.html",
-                        "/config/metatest-4/index.html"),
-                MetaTest.withStringReplacement("Success alert is not shown",
-                        "/BookStore/index.html",
-                        "/config/metatest-5/index.html"),
-                MetaTest.withStringReplacement("Each author can only have one book",
-                        "/BookStore/index.html",
-                        "/config/metatest-6/index.html")
+                        "/config/metatest-4/index.html")
         );
     }
 

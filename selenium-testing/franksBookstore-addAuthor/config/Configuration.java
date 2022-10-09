@@ -37,7 +37,7 @@ public class Configuration extends RunConfiguration {
                         "/config/metatest-2/index.html"),
                 MetaTest.withStringReplacement("does not add to database",
                         "/BookStore/index.html",
-                        "/config/metatest-s3/index.html")
+                        "/config/metatest-3/index.html")
         );
     }
 
