@@ -24,7 +24,7 @@ for category_dir in get_directories(os.getcwd()):
         andy_version = re_andy_version.group() if re_andy_version else "Unknown Andy version"
 
         # Print the score for the assignment.
-        print(f'{assignment_dir.split("/")[-2]}/{assignment_dir.split("/")[-1]}: {score}/100 ({andy_version})')
+        print(f'{andy_version} | {assignment_dir.split("/")[-2]}/{assignment_dir.split("/")[-1]}: {score}/100')
 
         # Update the `pipeline_failed` variable.
         if score != 100:
