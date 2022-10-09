@@ -1,9 +1,12 @@
-In this exercise, you will be testing the `getLabResult` method from the (fake) MyHealth app, which allows users to retrieve their medical data. As you can imagine, this kind of data is sensitive and users should only have access to the data they are authorised to view.
+_You may ignore the following paragraph if you wish, as it is not relevant for the solution._
 
-A short description of the method under test:
+_Amy the Hippo wants to know whether summer is finally here. However, she does not have a calendar, so she measures the temperature in different places around the swamp, and then uses a program to tell her whether it is summer, based on those values._
 
-> This method retrieves a specific lab result if the user requesting it is authorised to view it. It logs both an unauthorised request as well as if the lab result doesn't exist.
+The `isItSummer` method (in the library tab) takes a list of temperature values, and returns true if and only if _at least 75%_ of the temperature values are `20` degrees or above.
 
-Use **test doubles** to create a suitable test suite for this method.
+Your task is to write **property-based tests** (using _jqwik_) for this `isItSummer` method.
 
-**Important:** Use the `Mockito.mock(...)` method to create a mock. Do not use the `@Mock` annotation as Andy still can't recognize it.
+Some tips:
+
+* A good property-based test for this problem ensures 100% branch + condition coverage.
+* Have the [_jqwik_ manual](https://weblab.tudelft.nl/docs/jqwik/1.5.1/docs/1.5.1/user-guide.html) at hand (right-click and open in a new tab)
