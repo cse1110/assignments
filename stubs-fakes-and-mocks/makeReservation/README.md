@@ -1,9 +1,8 @@
-<!--NO_HARDWRAPS-->
+In this exercise, you will be testing the `makeReservation` method from SoftWHERE, a fake travel agency created and run by developers.
 
-SoftWHERE is a new travel agency created and run by developers.
-Because they never took SQT, they need your help to test their reservation system.
+> This method makes a reservation for a specific trip for a list of people.
 
-Your goal is to perform domain testing and structural testing on the `makeReservation` method. You should make use of mocks.
+Use **test doubles** to create a suitable test suite for this method.
 
 Tips:
 

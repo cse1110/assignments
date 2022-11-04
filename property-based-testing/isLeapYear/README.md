@@ -1,8 +1,9 @@
-The `isLeapYear` method returns whether a year is a leap year or not. Leap years are either (i) multiples of 400, or (ii) are multiples of 4 but not multiples of 100. The implementation is quite straightforward. 
+In this exercise, you will be testing the `isLeapYear` method.
 
-Your task is to write property-based tests (usinq JQWik) for this `isLeapYear` method.
+> This method returns whether a year is a leap year or not. Leap years are either (i) multiples of 400, or (ii) are multiples of 4 but not multiples of 100. The implementation is quite straightforward.
 
-Some tips:
+Use **property-based testing** to create a suitable test suite for this method.
 
-* A good property-based test for this problem ensures 100% branch + condition coverage.
-* Have the JQWik manual at hand: https://jqwik.net/docs/current/user-guide.html (right-click and open in a new tab)
+Tips:
+
+- Have the [JQWik manual](https://jqwik.net/docs/current/user-guide.html) at hand.

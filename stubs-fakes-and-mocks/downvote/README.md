@@ -1,6 +1,9 @@
-You are well aware of StackOverflow by now. Whenever someone downvotes a post, users lose points. See an imaginary (and simplified) version of the`downvote()` method.
+In this exercise, you will be testing the `downvote` method from StackOverflow (or an imaginary, simplified version of it).
 
-Your goal is to test this method.
+> This method lowers a user's points when their post is downvoted.
 
-* Your goal is to achieve 100% branch+condition coverage for the only method in the `StackOverflow` class.
-* You _should mock_ the dependencies that deserve to be mocked.
+Use **test doubles** to create a suitable test suite for this method.
+
+Tips:
+
+- Only mock the dependencies that deserve to be mocked.
