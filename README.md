@@ -26,7 +26,7 @@ If you have a Maven Plugin integration with your IDE, you would only have to loo
 
 ## Requirements
 
-We use Java 15 for all the exercises and in the grading tool. We can't promise things will work in other versions (you know Java, don't you?)
+We use Java 17 for all the exercises and in the grading tool. We can't promise things will work in other versions (you know Java, don't you?)
 
 ## License
 
