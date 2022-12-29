@@ -39,37 +39,37 @@ public class Configuration extends RunConfiguration {
                             throw new RuntimeException("killed the mutant");
                          }
                          """),
-                MetaTest.insertAt("the string is one lowercase letter", 31,
+                MetaTest.insertAt("the string is one lowercase letter", 32,
                         """
                         if (str.matches("[a-z]")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is one uppercase letter", 31,
+                MetaTest.insertAt("the string is one uppercase letter", 32,
                         """
                         if (str.matches("[A-Z]")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is one character whitespace", 31,
+                MetaTest.insertAt("the string is one character whitespace", 32,
                         """
                         if (str.matches(" ")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is multiple lowercase characters", 31,
+                MetaTest.insertAt("the string is multiple lowercase characters", 32,
                         """
                         if (str.matches("[a-z]+")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string is multiple uppercase characters", 31,
+                MetaTest.insertAt("the string is multiple uppercase characters", 32,
                         """
                         if (str.matches("[A-Z]+")) {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.insertAt("the string has more than 3 characters", 32,
+                MetaTest.insertAt("the string has more than 3 characters", 33,
                         """
                         if (buffer.length > 3) {
                             throw new RuntimeException("killed the mutant");

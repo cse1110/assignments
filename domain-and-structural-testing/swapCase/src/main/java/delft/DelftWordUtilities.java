@@ -6,12 +6,12 @@ class DelftWordUtilities {
         // Override default constructor, to prevent it from getting considered in the coverage report.
     }
 
+	// -----------------------------------------------------------------------
 	/**
 	 * Swaps the case of a String using a word based algorithm.
 	 *
 	 * <ul>
 	 * <li>Upper case character converts to Lower case
-	 * <li>Lower case character after Whitespace or at start converts to Title case
 	 * <li>Other Lower case character converts to Upper case
 	 * </ul>
 	 *

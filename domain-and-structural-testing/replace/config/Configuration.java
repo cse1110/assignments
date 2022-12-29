@@ -110,17 +110,17 @@ public class Configuration extends RunConfiguration {
                             throw new RuntimeException("killed the mutant");
                         }
                         """),
-                MetaTest.withStringReplacement("negate first if-statement",
-                        """
-		                if (isEmpty(text) || isEmpty(searchString) || replacement == null || max == 0) {
-			                return text;
-		                }
-                        """,
-                        """
-                        if (!isEmpty(text) && !isEmpty(searchString) && replacement != null && max != 0) {
-                            return text;
-                        }
-                        """),
+                // MetaTest.withStringReplacement("negate first if-statement",
+                //         """
+		        //         if (isEmpty(text) || isEmpty(searchString) || replacement == null || max == 0) {
+			    //             return text;
+		        //         }
+                //         """,
+                //         """
+                //         if (!isEmpty(text) && !isEmpty(searchString) && replacement != null && max != 0) {
+                //             return text;
+                //         }
+                //         """),
                 MetaTest.withStringReplacement("negate second if-statement",
                         """
                         if (ignoreCase) {

@@ -1,5 +1,7 @@
-See the implementation of the following problem: A "clump" in an array is a series of 2 or more adjacent elements of the same value. Return the number of clumps in the given array.
+In this exercise, you will be testing the `countClumps` method.
 
-Use domain testing and derive tests for the `countClumps` method. Then, augment your test suite with structural testing and reach achieve 100% branch+condition coverage.
+> This method returns the number of clumps in a given array. A "clump" in an array is a series of two or more adjacent elements of the same value.
 
-(Inspired by the Count Clumps problem: http://www.javaproblems.com/2013/11/java-array-3-countclumps-codingbat.html)
+Use **specification-based testing** to create a suitable test suite for this method. Then, augment your test suite with **structural testing**.
+
+*This method was taken from [Coding Bat](http://www.javaproblems.com/2013/11/java-array-3-countclumps-codingbat.html).*

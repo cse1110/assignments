@@ -1,7 +1,7 @@
-Automate the test cases you devised. Write them as JUnit5 test cases.
-If necessary, you can also test the helper methods directly.
+In this exercise, you will be testing the `isEqualCollection` method.
 
-You should:
+> Returns true iff the given Collections (<i>a</i> and <i>b</I>) contain exactly the same elements with exactly the same cardinalities. That is, iff the cardinality of <i>e</i> in <i>a</i> is equal to the cardinality of <i>e</i> in <i>b</i>, for each element <i>e</i> in <i>a</I>.
 
-- Link your test code with the test cases you created in the previous exercise. Adding comments (e.g., // test case 1) is a good solution.
-- Write beautiful test code. Make sure you have no duplicated code in your tests.
+Use **specification-based testing** to create a suitable test suite for this method. Then, augment your test suite with **structural testing**.
+
+*This method was taken from the [Apache Commons Collections](https://github.com/apache/commons-collections/blob/9df6f64b7ea729fff5d11fce6407cba249baafaa/src/main/java/org/apache/commons/collections4/CollectionUtils.java#L622).*

@@ -1,5 +1,5 @@
-Write tests for the `readingProgress` method. The method sets the progress of the user in reading a book. According to their progress, the system also sends an email to the reader.
+In this exercise, you will be testing the `readingProgress` method.
 
-Achieve 100% branch+condition coverage of this method. Mock the dependencies (using Mockito).
+> This method tracks a user's reading progress in a book. According to their progress, the system also sends an email to the reader.
 
-Mock only what needs to be mocked.
+Use **test doubles** to create a suitable test suite for this method.

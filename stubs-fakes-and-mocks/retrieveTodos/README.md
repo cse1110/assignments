@@ -1,3 +1,5 @@
-See the implementation of TODO list management.
+In this exercise, you will be testing the `retrieveTodos` method from a TODO-list management application.
 
-Write a test for `retrieveTodos` in the `TodoApplication` class. Mock what needs to be mocked.
+> This method retrieves all the todos of the user.
+
+Use **test doubles** to create a suitable test suite for this method.
