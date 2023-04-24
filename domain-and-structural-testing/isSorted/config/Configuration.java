@@ -25,11 +25,6 @@ public class Configuration extends RunConfiguration {
     }
 
     @Override
-    public int numberOfMutationsToConsider() {
-        return 9;
-    }
-
-    @Override
     public List<MetaTest> metaTests() {
         return List.of(
                 MetaTest.insertAt("the array is empty", 19,

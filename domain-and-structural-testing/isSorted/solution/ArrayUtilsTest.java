@@ -24,7 +24,7 @@ class ArrayUtilsTest {
 		Arguments tc3 = Arguments.of("sorted", new int[]{1, 2, 3}, true);
 		Arguments tc4 = Arguments.of("null array", null, true);
         Arguments tc5 = Arguments.of("sorted with doubles", new int[]{1, 1, 2, 2, 3}, true);
-        Arguments tc6 = Arguments.of("two elements", new int[]{1, 2}, true);
+        Arguments tc6 = Arguments.of("two elements", new int[]{2, 1}, false);
 		return Stream.of(tc0, tc1, tc2, tc3, tc4, tc5, tc6);
 	}
 
